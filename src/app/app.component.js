@@ -6,18 +6,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var Player = (function () {
-    function Player() {
-    }
-    return Player;
-}());
-exports.Player = Player;
 var AppComponent = (function () {
     function AppComponent() {
         this.players = [
-            { id: 0, name: 'Philip', life: 40 },
+            { id: 0, name: 'Philip', life: 25 },
             { id: 1, name: 'Rick', life: 40 },
-            { id: 2, name: 'Shayler', life: 40 },
+            { id: 2, name: 'Shayler', life: 25 },
             { id: 3, name: 'Reid', life: 40 }
         ];
     }
@@ -32,7 +26,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n    <div class=\"player\" [class.rotate]=\"player.id < players.length / 2\" *ngFor=\"let player of players\">\n        <div class=\"life-control\" (click)=\"lifeDown(player)\">&lt;</div>\n        <div>\n            <h2>{{ player.name }}</h2>\n            <h1>{{ player.life }}</h1>\n        </div>\n        <div class=\"life-control\" (click)=\"lifeUp(player)\">&gt;</div>\n    </div>",
+        template: "\n    <div class=\"player\" \n         [class.rotate]=\"player.id < players.length / 2\" \n         *ngFor=\"let player of players\">\n        \n        <div class=\"life-control\" (click)=\"lifeDown(player)\">&lt;</div>\n        <div>\n            <h2>{{ player.name }}</h2>\n            <h1>{{ player.life }}</h1>\n        </div>\n        <div class=\"life-control\" (click)=\"lifeUp(player)\">&gt;</div>\n    </div>",
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
