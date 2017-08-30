@@ -7,19 +7,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
-var life_control_component_1 = require("./life-control/life-control.component");
-var AppModule = (function () {
-    function AppModule() {
+var life_control_component_1 = require("./life-control.component");
+var LifeControlModule = (function () {
+    function LifeControlModule() {
     }
-    return AppModule;
+    return LifeControlModule;
 }());
-AppModule = __decorate([
+LifeControlModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent, life_control_component_1.LifeControlComponent],
-        bootstrap: [app_component_1.AppComponent]
+        declarations: [life_control_component_1.LifeControlComponent],
+        bootstrap: [life_control_component_1.LifeControlComponent]
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], LifeControlModule);
+exports.LifeControlModule = LifeControlModule;
+//# sourceMappingURL=life-control.module.js.map

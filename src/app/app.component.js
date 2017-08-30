@@ -9,24 +9,18 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
         this.players = [
-            { id: 0, name: 'Philip', life: 25 },
-            { id: 1, name: 'Rick', life: 40 },
-            { id: 2, name: 'Shayler', life: 25 },
-            { id: 3, name: 'Reid', life: 40 }
+            { id: 0, name: 'Philip', life: 26 },
+            { id: 1, name: 'Rick', life: 27 },
+            { id: 2, name: 'Shayler', life: 28 },
+            { id: 3, name: 'Reid', life: 29 }
         ];
     }
-    AppComponent.prototype.lifeDown = function (player) {
-        player.life -= 1;
-    };
-    AppComponent.prototype.lifeUp = function (player) {
-        player.life += 1;
-    };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n    <div class=\"player\" \n         [class.rotate]=\"player.id < players.length / 2\" \n         *ngFor=\"let player of players\">\n        \n        <div class=\"life-control\" (click)=\"lifeDown(player)\">&lt;</div>\n        <div>\n            <h2>{{ player.name }}</h2>\n            <h1>{{ player.life }}</h1>\n        </div>\n        <div class=\"life-control\" (click)=\"lifeUp(player)\">&gt;</div>\n    </div>",
+        template: "\n    <div class=\"player\" \n        [class.rotate]=\"player.id < players.length / 2\" \n        *ngFor=\"let player of players\">\n         \n        <life-control [player]=\"player\"></life-control>\n    </div>",
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
