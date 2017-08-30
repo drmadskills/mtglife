@@ -28,7 +28,7 @@ __decorate([
 LifeControlComponent = __decorate([
     core_1.Component({
         selector: 'life-control',
-        template: "\n    <div class=\"life-control-container\" *ngIf=\"player\">\n        <div class=\"life-control\" (click)=\"lifeDown(player)\">&lt;</div>\n        <div>\n            <h2>{{ player.name }}</h2>\n            <h1>{{ player.life }}</h1>\n        </div>\n        <div class=\"life-control\" (click)=\"lifeUp(player)\">&gt;</div>\n    </div>",
+        template: "\n    <div class=\"life-control-container\" *ngIf=\"player\">\n        <div class=\"life-control\" (click)=\"lifeDown(player)\">&#x276E;</div>\n        <div>\n            <h2>{{ player.name }}</h2>\n            <h1>{{ player.life }}</h1>\n        </div>\n        <div class=\"life-control\" (click)=\"lifeUp(player)\">&#x276F;</div>\n    </div>",
     })
 ], LifeControlComponent);
 exports.LifeControlComponent = LifeControlComponent;

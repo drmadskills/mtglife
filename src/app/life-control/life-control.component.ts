@@ -5,12 +5,12 @@ import { Player } from '../player/player';
   selector: 'life-control',
   template: `
     <div class="life-control-container" *ngIf="player">
-        <div class="life-control" (click)="lifeDown(player)">&lt;</div>
+        <div class="life-control" (click)="lifeDown(player)">&#x276E;</div>
         <div>
             <h2>{{ player.name }}</h2>
             <h1>{{ player.life }}</h1>
         </div>
-        <div class="life-control" (click)="lifeUp(player)">&gt;</div>
+        <div class="life-control" (click)="lifeUp(player)">&#x276F;</div>
     </div>`,
 })
 export class LifeControlComponent  {
