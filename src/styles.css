@@ -1,0 +1,37 @@
+body {
+    height: 100%;
+}
+
+h1, .life-control {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 400%;
+}
+
+h2 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 125%;
+}
+
+.life-control {
+    padding: 30px;
+}
+
+.player {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+.player > div {
+    display: inline-block;
+    margin: auto;
+}
