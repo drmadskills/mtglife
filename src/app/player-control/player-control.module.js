@@ -7,19 +7,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
-var player_control_component_1 = require("./player-control/player-control.component");
-var AppModule = (function () {
-    function AppModule() {
+var player_control_component_1 = require("./player-control.component");
+var PlayerControlModule = (function () {
+    function PlayerControlModule() {
     }
-    return AppModule;
+    return PlayerControlModule;
 }());
-AppModule = __decorate([
+PlayerControlModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent, player_control_component_1.PlayerControlComponent],
-        bootstrap: [app_component_1.AppComponent]
+        declarations: [player_control_component_1.PlayerControlComponent],
+        bootstrap: [player_control_component_1.PlayerControlComponent]
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], PlayerControlModule);
+exports.PlayerControlModule = PlayerControlModule;
+//# sourceMappingURL=player-control.module.js.map

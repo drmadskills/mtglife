@@ -9,10 +9,10 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
         this.players = [
-            { id: 0, name: 'Philip', life: 26 },
-            { id: 1, name: 'Rick', life: 27 },
-            { id: 2, name: 'Shayler', life: 28 },
-            { id: 3, name: 'Reid', life: 29 }
+            { id: 0, life: 40, theme: 'dragons', commanderDamage: [0, 0, 0] },
+            { id: 1, life: 40, theme: 'wizards', commanderDamage: [0, 0, 0] },
+            { id: 2, life: 40, theme: 'cats', commanderDamage: [0, 0, 0] },
+            { id: 3, life: 40, theme: 'vampires', commanderDamage: [0, 0, 0] }
         ];
     }
     return AppComponent;
@@ -20,7 +20,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n    <div class=\"player\" \n        [class.rotate]=\"player.id < players.length / 2\" \n        *ngFor=\"let player of players\">\n         \n        <life-control [player]=\"player\"></life-control>\n    </div>",
+        template: "\n    <div class=\"player-control-container\"\n         [class.rotate]=\"player.id < players.length / 2\" \n         *ngFor=\"let player of players\">\n        \n        <player-control [player]=\"player\"></player-control>\n    </div>",
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

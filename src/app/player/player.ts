@@ -1,5 +1,6 @@
 export class Player {
     id: number;
-    name: string;
     life: number;
+    theme: string;
+    commanderDamage: number[];
 }
