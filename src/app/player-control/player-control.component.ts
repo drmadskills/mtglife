@@ -5,7 +5,9 @@ import { CommanderDamageComponent } from '../commander-damage/commander-damage.c
 @Component({
   selector: 'player-control',
   template: `
-    <div class="player-control theme_{{ player.theme }}" *ngIf="player">
+    <div class="player-control theme_{{ player.theme }}" 
+        [class.loss]="player.loss" 
+        *ngIf="player">
 
         <div *ngIf="player.id == 1 || player.id == 2" class="commander-damage-container">
             <commander-damage [player]="player"></commander-damage>
@@ -30,26 +32,10 @@ export class PlayerControlComponent  {
         player.life -= 1;
 
         player.checkLoseCondition();
-
-        // if (this.isLoseCondition(player)) {
-        //     player.theme = 'dead';
-        // }
     }
     
     lifeUp(player: Player): void {
         player.life += 1;
-
-        player.checkLoseCondition();
-    }
-    
-    commanderDamageUp(player: Player, index: number): void {
-        player.commanderDamage[index] += 1;
-
-        player.checkLoseCondition();
-    }
-    
-    commanderDamageDown(player: Player, index: number): void {
-        player.commanderDamage[index] -= 1;
 
         player.checkLoseCondition();
     }

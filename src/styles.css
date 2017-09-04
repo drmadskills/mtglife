@@ -136,6 +136,7 @@ h1 {
     background-image: url('assets/nekusar.jpg');
 }
 
-.theme_dead {
+.loss {
+    background-image: none;
     background-color: red;
 }

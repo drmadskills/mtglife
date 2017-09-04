@@ -5,6 +5,7 @@ export class Player {
     commanderDamage: number[];
     poison: number;
     energy: number;
+    loss: boolean;
 
     constructor (id: number, life: number, theme: string, commanderDamage: number[], poison = 0, energy = 0) {
         this.id = id;
@@ -13,12 +14,12 @@ export class Player {
         this.commanderDamage = commanderDamage;
         this.poison = poison;
         this.energy = energy;
+
+        this.loss = false;
     }
 
     checkLoseCondition(): void {
-        if (this.isLoseCondition()) {
-            this.theme = "dead";
-        }
+        this.loss = this.isLoseCondition();
     }
 
     isLoseCondition(): boolean {
