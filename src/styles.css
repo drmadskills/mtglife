@@ -6,6 +6,7 @@ body {
     left: 0px;
     margin: 0;
     padding: 0;
+    background-color: black;
 }
 
 h1 {
@@ -26,17 +27,24 @@ h1 {
     outline: none;
 }
 
-.rotate {
+.rotate90 {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+
+.rotate180 {
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
 }
 
 .player-control-container {
-    width: 50%;
-    height: 50%;
+    width: 48%;
+    height: 48%;
     display: inline-block;
     text-align: center;
-    float: left;
+    border-radius: 32px;
+    overflow: hidden;
+    margin: 8px;
 }
 
 .player-control-container .player-control {
@@ -126,4 +134,8 @@ h1 {
 
 .theme_wizards {
     background-image: url('assets/nekusar.jpg');
+}
+
+.theme_dead {
+    background-color: red;
 }

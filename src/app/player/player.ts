@@ -14,4 +14,25 @@ export class Player {
         this.poison = poison;
         this.energy = energy;
     }
+
+    checkLoseCondition(): void {
+        if (this.isLoseCondition()) {
+            this.theme = "dead";
+        }
+    }
+
+    isLoseCondition(): boolean {
+        if (this.life <= 0) {
+            return true;
+        }
+        else {
+            for (let cmdr of this.commanderDamage) {
+                if (cmdr >= 21) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
 }

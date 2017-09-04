@@ -18,9 +18,13 @@ export class CommanderDamageComponent  {
     
     commanderDamageUp(player: Player, index: number): void {
         player.commanderDamage[index] += 1;
+
+        player.checkLoseCondition();
     }
     
     commanderDamageDown(player: Player, index: number): void {
         player.commanderDamage[index] -= 1;
+
+        player.checkLoseCondition();
     }
 }

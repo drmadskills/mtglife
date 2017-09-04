@@ -6,7 +6,7 @@ import { PlayerControlComponent } from './player-control/player-control.componen
   selector: 'my-app',
   template: `
     <div class="player-control-container"
-         [class.rotate]="player.id < players.length / 2" 
+         [class.rotate180]="player.id < players.length / 2" 
          *ngFor="let player of players">
         
         <player-control [player]="player"></player-control>
@@ -15,9 +15,9 @@ import { PlayerControlComponent } from './player-control/player-control.componen
 export class AppComponent  {
     
     players: Player[] = [
-        { id: 0, life: 40, theme: 'dragons', commanderDamage: [0, 0, 0] },
-        { id: 1, life: 40, theme: 'wizards', commanderDamage: [0, 0, 0] },
-        { id: 2, life: 40, theme: 'cats', commanderDamage: [0, 0, 0] },
-        { id: 3, life: 40, theme: 'vampires', commanderDamage: [0, 0, 0] }
-    ]
+        new Player(0, 40, 'dragons', [0, 0, 0]),
+        new Player(1, 40, 'wizards', [0, 0, 0]),
+        new Player(2, 40, 'cats', [0, 0, 0]),
+        new Player(3, 40, 'vampires', [0, 0, 0])
+    ];
 }
