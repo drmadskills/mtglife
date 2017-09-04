@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Player } from '../player/player';
+import { CommanderDamageComponent } from '../commander-damage/commander-damage.component';
 
 @Component({
   selector: 'player-control',
@@ -7,13 +8,7 @@ import { Player } from '../player/player';
     <div class="player-control theme_{{ player.theme }}"  
          *ngIf="player">
         <div *ngIf="player.id == 1 || player.id == 2" class="commander-damage-container">
-            <div class="unselectable" *ngFor="let damage of player.commanderDamage; index as i">
-                 
-                <div class="up" (click)="commanderDamageUp(player, i)"></div>
-                <span>{{ damage }}</span>
-                <div class="down" (click)="commanderDamageDown(player, i)"></div>
-                
-            </div>
+            <commander-damage [player]="player"></commander-damage>
         </div>
         <div class="life-control-container">
             <div class="life-control up" (click)="lifeUp(player)"></div>
@@ -21,13 +16,7 @@ import { Player } from '../player/player';
             <div class="life-control down" (click)="lifeDown(player)"></div>
         </div>
         <div *ngIf="player.id == 0 || player.id == 3" class="commander-damage-container">
-            <div class="unselectable" *ngFor="let damage of player.commanderDamage; index as i">
-                 
-                <div class="up" (click)="commanderDamageUp(player, i)"></div>
-                <span>{{ damage }}</span>
-                <div class="down" (click)="commanderDamageDown(player, i)"></div>
-                
-            </div>
+            <commander-damage [player]="player"></commander-damage>
         </div>
     </div>`,
 })

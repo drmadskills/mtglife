@@ -1,3 +1,5 @@
 node_modules/
 .editorconfig
 *.log
+*.js
+*.js.map

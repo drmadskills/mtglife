@@ -61,14 +61,14 @@ h1 {
     background-color: rgba(0,0,0,0.4);
 }
 
-.player-control .commander-damage-container > div {
+.player-control .commander-damage-container div {
     color: gold;
     height: 33%;
 /*    margin-top: 50%;*/
     position: relative;
 }
 
-.player-control .commander-damage-container > div > span {
+.player-control .commander-damage-container div > span {
     position: relative;
     top: 33%;
 }

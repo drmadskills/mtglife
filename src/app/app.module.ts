@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }  from './app.component';
 import { PlayerControlComponent }  from './player-control/player-control.component';
+import { CommanderDamageComponent }  from './commander-damage/commander-damage.component';
 
 @NgModule({
   imports:      [ BrowserModule ],
-  declarations: [ AppComponent, PlayerControlComponent ],
+  declarations: [ AppComponent, PlayerControlComponent, CommanderDamageComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
