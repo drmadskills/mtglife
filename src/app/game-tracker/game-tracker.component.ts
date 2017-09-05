@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Player } from '../player/player';
 import { PlayerControlComponent } from '../player-control/player-control.component';
+import { GameService } from '../services/game.service';
 
 @Component({
   selector: 'game-tracker',
@@ -11,13 +12,19 @@ import { PlayerControlComponent } from '../player-control/player-control.compone
         
         <player-control [player]="player"></player-control>
     </div>`,
+    providers: [
+        GameService
+    ]
 })
-export class GameTrackerComponent  {
-    
-    players: Player[] = [
-        new Player(0, 40, 'dragons', [0, 0, 0]),
-        new Player(1, 40, 'wizards', [0, 0, 0]),
-        new Player(2, 40, 'cats', [0, 0, 0]),
-        new Player(3, 40, 'vampires', [0, 0, 0])
-    ];
+export class GameTrackerComponent implements OnInit  {
+
+    players: Player[];
+
+    constructor (private gameService: GameService) { }
+
+    ngOnInit(): void {
+        this.gameService.getPlayers().then(
+            players => this.players = players
+        );
+    }
 }

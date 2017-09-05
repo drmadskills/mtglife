@@ -17,6 +17,12 @@ h1 {
   width: 100%;
 }
 
+h2 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+}
+
 .unselectable {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
