@@ -144,5 +144,6 @@ h2 {
 
 .loss {
     background-image: none;
-    background-color: red;
+    background-color: darkred;
+    transition: background-color 1.1s ease-in;
 }
