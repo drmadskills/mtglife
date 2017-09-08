@@ -15,7 +15,7 @@ import { CommanderDamageComponent } from '../commander-damage/commander-damage.c
         
         <div class="life-control-container">
             <div class="life-control up" (click)="lifeUp(player)"></div>
-            <h1 class="unselectable">{{ player.life }}</h1>
+            <h1 class="life-score unselectable">{{ player.life }}</h1>
             <div class="life-control down" (click)="lifeDown(player)"></div>
         </div>
 

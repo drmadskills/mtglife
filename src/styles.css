@@ -6,19 +6,11 @@ body {
     left: 0px;
     margin: 0;
     padding: 0;
-    background-color: black;
-}
-
-h1 {
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 9em;
-  position: absolute;
-  width: 100%;
+    background-color: #F3F2F0;
 }
 
 h2 {
-  color: white;
+  color: #3D4F7B;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3em;
 }
@@ -88,12 +80,10 @@ h2 {
 }
 
 .player-control .commander-damage-container .up {
-    position: absolute;
     top: 0px;
 }
 
 .player-control .commander-damage-container .down {
-    position: absolute;
     bottom: 0px;
 }
 
@@ -112,15 +102,28 @@ h2 {
     margin: auto;
 }
 
+.life-control-container h1.life-score {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9em;
+    position: absolute;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    top: 24%;
+    z-index: 150;
+}
+
 .life-control {
     font-size: 300%;
     width: 100%;
     height: 50%;
     position: absolute;
+    z-index: 200;
 }
 
 .life-control.down {
-    margin-top: 50%;
+    bottom: 0;
 }
 
 /**
