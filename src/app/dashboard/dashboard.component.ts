@@ -4,18 +4,21 @@ import { Component } from '@angular/core';
     selector: 'dashboard',
     template: `
         <h2>Dashboard</h2>
-        <input type="text" placeholder="Number of Players" [(ngModel)]="playerCount" />
-
-        <select [(ngModel)]="selectedTheme">
-            <option *ngFor="let theme of themes" [value]="theme.name">{{ theme.label }}</option>
-        </select>
-
+        <input type="number" placeholder="Number of Players" [(ngModel)]="playerCount" (change)="playerCountChanged($event)" />
         <a routerLink="/game">Start Game</a>
+
+        <div *ngFor="let playerConfig of playerList">
+            <select [(ngModel)]="selectedTheme">
+                <option *ngFor="let theme of themes" [value]="theme.name">{{ theme.label }}</option>
+            </select>
+        <div>
     `
 })
 export class DashboardComponent {
-    playerCount: number;
+    playerCount: number = 0;
+    playerList: number[];
     selectedTheme: 'wizards';
+
     themes: any[] = [
         {
             name: 'wizards',
@@ -33,5 +36,10 @@ export class DashboardComponent {
             name: 'cats',
             label: 'Arabho'
         }
-    ]
+    ];
+
+    playerCountChanged(event: any): void {
+        this.playerCount = this.playerCount || 0;
+        this.playerList = new Array(this.playerCount);
+    }
 }
