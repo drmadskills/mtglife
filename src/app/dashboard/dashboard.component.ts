@@ -5,24 +5,28 @@ import { Component } from '@angular/core';
     template: `
         <h2>Dashboard</h2>
         <div class="padded-container">
-            <input type="number" placeholder="Number of Players" [(ngModel)]="playerCount" (change)="playerCountChanged($event)" />
+            Players? 
+            <button (click)="adjustPlayerCount(-1)" [disabled]="playerCount <= 2">-</button>
+            {{ playerCount }}
+            <button (click)="adjustPlayerCount(1)" [disabled]="playerCount >= 4">+</button>
         </div>
 
-        <div class="padded-container" *ngFor="let playerConfig of playerList">
+        <div class="padded-container" *ngFor="let playerConfig of playerList; index as i">
+            Player {{ i+1 }} theme: 
             <select [(ngModel)]="selectedTheme">
                 <option *ngFor="let theme of themes" [value]="theme.name">{{ theme.label }}</option>
             </select>
         </div>
 
-        <div class="padded-container">
-            <a [hidden]="playerCount <= 0" routerLink="/game">Start Game</a>
+        <div class="padded-container" [hidden]="playerCount < 2">
+            <a routerLink="/game">Start Game</a>
         </div>
     `,
     styleUrls: ['./dashboard.css']
 })
 export class DashboardComponent {
-    playerCount: number = 0;
-    playerList: number[];
+    playerCount: number = 2;
+    playerList: number[] = [0, 0];
     selectedTheme: 'wizards';
 
     themes: any[] = [
@@ -44,7 +48,13 @@ export class DashboardComponent {
         }
     ];
 
-    playerCountChanged(event: any): void {
+    adjustPlayerCount(amount: number): void {
+        this.playerCount += amount;
+
+        this.playerCountChanged();
+    }
+
+    playerCountChanged(): void {
         this.playerCount = this.playerCount || 0;
         this.playerList = new Array(this.playerCount);
     }
