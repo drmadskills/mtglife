@@ -4,15 +4,19 @@ import { Component } from '@angular/core';
     selector: 'dashboard',
     template: `
         <h2>Dashboard</h2>
-        <input type="number" placeholder="Number of Players" [(ngModel)]="playerCount" (change)="playerCountChanged($event)" />
-        <a routerLink="/game">Start Game</a>
+        <div class="padded-container">
+            <input type="number" placeholder="Number of Players" [(ngModel)]="playerCount" (change)="playerCountChanged($event)" />
+        </div>
 
-        <div *ngFor="let playerConfig of playerList">
+        <div class="padded-container" *ngFor="let playerConfig of playerList">
             <select [(ngModel)]="selectedTheme">
                 <option *ngFor="let theme of themes" [value]="theme.name">{{ theme.label }}</option>
             </select>
-        <div>
-    `
+        </div>
+
+        <a [hidden]="playerCount <= 0" routerLink="/game">Start Game</a>
+    `,
+    styleUrls: ['./dashboard.css']
 })
 export class DashboardComponent {
     playerCount: number = 0;

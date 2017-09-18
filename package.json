@@ -1,7 +1,7 @@
 {
-  "name": "angular-quickstart",
-  "version": "1.0.0",
-  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "name": "mtg-life",
+  "version": "0.1.0",
+  "description": "Multi-player life tracking app.",
   "scripts": {
     "build": "tsc -p src/",
     "build:watch": "tsc -p src/ -w",
