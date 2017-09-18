@@ -21,3 +21,15 @@ input[type=number] {
     border-left: none;
     border-right: none; 
 }
+
+a {
+    width: 100%;
+    text-align: center;
+    height: 36px;
+    display: inline-block;
+    padding-top: 16px;
+    background-color: #008A24;
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+}

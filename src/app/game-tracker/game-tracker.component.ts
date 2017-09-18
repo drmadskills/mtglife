@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from '../player/player';
 import { PlayerControlComponent } from '../player-control/player-control.component';
+import { FourPlayerLayoutComponent } from './layouts/four-player.component';
 import { GameService } from '../services/game.service';
 
 @Component({

@@ -14,7 +14,9 @@ import { Component } from '@angular/core';
             </select>
         </div>
 
-        <a [hidden]="playerCount <= 0" routerLink="/game">Start Game</a>
+        <div class="padded-container">
+            <a [hidden]="playerCount <= 0" routerLink="/game">Start Game</a>
+        </div>
     `,
     styleUrls: ['./dashboard.css']
 })
