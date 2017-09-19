@@ -7,12 +7,8 @@ import { GameService } from '../services/game.service';
 @Component({
   selector: 'game-tracker',
   template: `
-    <div class="player-control-container"
-         [class.rotate180]="player.id < players.length / 2" 
-         *ngFor="let player of players">
-        
-        <player-control [player]="player"></player-control>
-    </div>`,
+    <four-player-layout [players]="players">
+    </four-player-layout>`,
     providers: [
         GameService
     ]

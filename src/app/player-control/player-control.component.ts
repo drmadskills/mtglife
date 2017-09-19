@@ -9,7 +9,7 @@ import { CommanderDamageComponent } from '../commander-damage/commander-damage.c
         [class.loss]="player.loss" 
         *ngIf="player">
 
-        <div *ngIf="player.id == 1 || player.id == 2" class="commander-damage-container">
+        <div class="commander-damage-container">
             <commander-damage [player]="player"></commander-damage>
         </div>
         
@@ -19,11 +19,8 @@ import { CommanderDamageComponent } from '../commander-damage/commander-damage.c
             <div class="life-control down" (click)="lifeDown(player)"></div>
         </div>
 
-        <div *ngIf="player.id == 0 || player.id == 3" class="commander-damage-container">
-            <commander-damage [player]="player"></commander-damage>
-        </div>
-
     </div>`,
+    styleUrls: ['./player-control.css']
 })
 export class PlayerControlComponent  {
     @Input() player: Player;
