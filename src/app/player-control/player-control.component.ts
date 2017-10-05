@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Player } from '../player/player';
 import { CommanderDamageComponent } from '../commander-damage/commander-damage.component';
+import { PlayerCountersComponent } from '../player-counters/player-counters.component';
 
 @Component({
   selector: 'player-control',
@@ -19,12 +20,16 @@ import { CommanderDamageComponent } from '../commander-damage/commander-damage.c
             <div class="life-control down" (click)="lifeDown(player)"></div>
         </div>
 
+        <div class="counters-container">
+            <player-counters [player]="player"></player-counters>
+        </div>
+
     </div>`,
     styleUrls: ['./player-control.css']
 })
 export class PlayerControlComponent  {
-    @Input() player: Player;
-    
+    @Input() public player: Player;
+
     lifeDown(player: Player): void {
         player.life -= 1;
 

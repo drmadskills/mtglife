@@ -13,15 +13,15 @@
     float: left;
 }
 
-.commander-damage-container {
-    width: 15%;
+.commander-damage-container, .counters-container {
+    width: 12%;
     font-size: 2em;
     vertical-align: middle;
     background-color: rgba(0,0,0,0.4);
 }
 
 .player-control .life-control-container {
-    width: 85%;
+    width: 76%;
     position: relative;
 }
 

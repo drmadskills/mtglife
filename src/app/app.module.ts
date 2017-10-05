@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent }  from './app.component';
 import { PlayerControlComponent }  from './player-control/player-control.component';
 import { CommanderDamageComponent }  from './commander-damage/commander-damage.component';
+import { PlayerCountersComponent }  from './player-counters/player-counters.component';
 import { GameTrackerComponent } from './game-tracker/game-tracker.component';
 import { FourPlayerLayoutComponent } from './game-tracker/layouts/four-player.component';
 import { ThreePlayerLayoutComponent } from './game-tracker/layouts/three-player.component';
@@ -36,6 +37,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppComponent,
     PlayerControlComponent,
     CommanderDamageComponent,
+    PlayerCountersComponent,
     GameTrackerComponent,
     FourPlayerLayoutComponent,
     ThreePlayerLayoutComponent,

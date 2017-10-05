@@ -1,3 +1,15 @@
+.commander-damage {
+    height: 33%;
+/*    margin-top: 50%;*/
+    position: relative;
+}
+
+.damage-value {
+    position: relative;
+    top: 33%;
+    color: gold;
+}
+
 .up, .down {
     position: absolute;
     width: 100%;
@@ -10,16 +22,4 @@
 
 .down {
     bottom: 0px;
-}
-
-.commander-damage {
-    height: 33%;
-/*    margin-top: 50%;*/
-    position: relative;
-}
-
-.damage-value {
-    position: relative;
-    top: 33%;
-    color: gold;
 }
