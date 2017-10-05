@@ -65,11 +65,15 @@
 }
 
 .theme_vampires {
-    background-image: url('assets/kaalia.jpg');
+    background-image: url('assets/markov.jpg');
 }
 
 .theme_wizards {
-    background-image: url('assets/nekusar.jpg');
+    background-image: url('assets/inalla.jpg');
+}
+
+.theme_scarab_god {
+    background-image: url('assets/scarab_god.jpg');
 }
 
 .loss {
